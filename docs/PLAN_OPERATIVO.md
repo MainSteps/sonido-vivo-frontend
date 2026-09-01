@@ -26,6 +26,7 @@ No se usarán una rama `develop`, hitos ni múltiples tableros durante la Evalua
 | Código | Trabajo | Responsable previsto |
 |---|---|---|
 | P-02 | Aceptar invitaciones, clonar y completar una rama de práctica | Equipo |
+| GUIA-01 | Realizar tutorial práctico de GitHub Desktop con una Pull Request de ensayo | ArgOS + Diego |
 | P-03 | Consolidar requisitos y criterios de aceptación del ERS | Equipo |
 | P-04 | Definir guía visual a partir de los mockups de referencia | Equipo |
 | OPS-02 | Activar revisión y alertas delimitadas de ArgOS | Diego + ArgOS |
