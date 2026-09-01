@@ -1,0 +1,53 @@
+name: Tarea
+description: Trabajo planificado para Sonido Vivo
+title: "[TAREA] "
+labels:
+  - "tipo: tarea"
+body:
+  - type: markdown
+    attributes:
+      value: "Describe un resultado verificable. No incluyas contraseñas ni datos personales reales."
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: ¿Qué resultado debe quedar disponible?
+    validations:
+      required: true
+  - type: textarea
+    id: alcance
+    attributes:
+      label: Alcance
+      description: Indica qué incluye y qué queda fuera.
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: Escribe una condición comprobable por línea.
+      placeholder: |
+        - [ ] Criterio 1
+        - [ ] Criterio 2
+    validations:
+      required: true
+  - type: dropdown
+    id: riesgo
+    attributes:
+      label: Riesgo
+      options:
+        - Verde
+        - Amarillo
+        - Rojo
+    validations:
+      required: true
+  - type: input
+    id: fecha
+    attributes:
+      label: Fecha objetivo
+      placeholder: DD-MM-AAAA
+  - type: textarea
+    id: fuentes
+    attributes:
+      label: Fuentes o requisitos relacionados
+      description: Pauta, ERS, decisión del equipo o Issue relacionado.
