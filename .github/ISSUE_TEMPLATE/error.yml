@@ -1,0 +1,43 @@
+name: Error
+description: Comportamiento incorrecto o regresión
+title: "[ERROR] "
+labels:
+  - "tipo: error"
+body:
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción
+      description: ¿Qué ocurrió y qué debía ocurrir?
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      placeholder: |
+        1. Abrir...
+        2. Seleccionar...
+        3. Observar...
+    validations:
+      required: true
+  - type: input
+    id: entorno
+    attributes:
+      label: Entorno
+      placeholder: Navegador, sistema y resolución
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Evidencia
+      description: Capturas o mensajes de error, sin información sensible.
+  - type: dropdown
+    id: riesgo
+    attributes:
+      label: Riesgo
+      options:
+        - Verde
+        - Amarillo
+        - Rojo
+    validations:
+      required: true

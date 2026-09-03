@@ -1,0 +1,24 @@
+name: Política y sintaxis
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: argos-pr-checks-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  comprobar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener el repositorio
+        uses: actions/checkout@v4
+      - name: Comprobar política y sintaxis
+        env:
+          BRANCH_NAME: ${{ github.head_ref }}
+        run: node scripts/check-repository.mjs

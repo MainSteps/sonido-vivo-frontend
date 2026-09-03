@@ -1,0 +1,27 @@
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Dependencias, compilación y pruebas
+node_modules/
+coverage/
+dist/
+*.log
+tmp/
+*.bak
+
+# Variables y credenciales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account.json
+
+# Entregables generados
+*.zip
