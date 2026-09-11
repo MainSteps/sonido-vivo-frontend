@@ -16,6 +16,9 @@ const inputEmail = document.getElementById("input-email")
 // Identificar el campo de contraseña.
 const inputPassword = document.getElementById("input-password")
 
+// Identificar el campo de dirección.
+const inputDireccion = document.getElementById("input-direccion")
+
 // Comprobar los campos cuando se hace clic en el botón.
 botonRegistro.addEventListener("click", function() {
     const run = inputRun.value
@@ -23,6 +26,7 @@ botonRegistro.addEventListener("click", function() {
     const apellidos = inputApellidos.value
     const email = inputEmail.value
     const password = inputPassword.value
+    const direccion = inputDireccion.value
 
     if (run === "") {
         alert("Debe ingresar su RUN.")
@@ -46,6 +50,11 @@ botonRegistro.addEventListener("click", function() {
 
     if (password === "") {
         alert("Debe ingresar una contraseña.")
+        return
+    }
+
+    if (direccion === "") {
+        alert("Debe ingresar su dirección.")
         return
     }
 
