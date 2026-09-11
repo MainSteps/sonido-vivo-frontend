@@ -17,9 +17,9 @@ Proyecto semestral de **Desarrollo Full Stack II (DSY1104)**. En la Evaluación 
 
 | Integrante | Paquete principal |
 |---|---|
-| Diego Pazos | Estructura, navegación, diseño adaptable y carrito |
-| Matías | Catálogo, detalle y mantenimiento de productos |
-| Michel | Registro, acceso, contacto y validaciones |
+| Diego Pazos | Catálogo, detalle y mantenimiento de productos |
+| Matías | Guía visual, estructura, navegación, diseño adaptable, carrito y datos simulados |
+| Michel | Registro, acceso, contacto, validaciones y pruebas de interfaz |
 
 ArgOS participa como coordinador operativo y revisor técnico común. No reemplaza a los integrantes ni toma decisiones académicas por el equipo.
 
@@ -38,4 +38,4 @@ Este frontend usa datos simulados. No se deben guardar contraseñas reales, dato
 
 ## Estado actual
 
-El repositorio base está creado. Las invitaciones de Matías y Michel están pendientes de aceptación; después cada integrante hará una rama de prueba para verificar el flujo completo.
+El repositorio base está creado. Matías y Michel ya aceptaron el acceso como colaboradores. Las responsabilidades vigentes se gestionan en los Issues de GitHub; el equipo aplicará el flujo Issue → rama → commit → Pull Request durante el desarrollo real.
