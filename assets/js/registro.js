@@ -10,11 +10,15 @@ const inputApellidos = document.getElementById("input-apellidos")
 // Identificar el campo de correo electrónico.
 const inputEmail = document.getElementById("input-email")
 
+// Identificar el campo de contraseña.
+const inputPassword = document.getElementById("input-password")
+
 // Comprobar los campos cuando se hace clic en el botón.
 botonRegistro.addEventListener("click", function() {
     const nombre = inputNombre.value
     const apellidos = inputApellidos.value
     const email = inputEmail.value
+    const password = inputPassword.value
 
     if (nombre === "") {
         alert("Debe ingresar su nombre.")
@@ -31,5 +35,10 @@ botonRegistro.addEventListener("click", function() {
         return
     }
 
-    alert("Demostración de Sonido Vivo: nombre, apellidos y correo están completados. Las demás validaciones están pendientes y no se creó una cuenta.")
+    if (password === "") {
+        alert("Debe ingresar una contraseña.")
+        return
+    }
+
+    alert("Demostración de Sonido Vivo: los campos revisados están completados. Las demás validaciones están pendientes y no se creó una cuenta.")
 })
