@@ -31,6 +31,11 @@ botonContacto.addEventListener("click", function() {
         return
     }
 
+    if (email !== "" && !email.endsWith("@duoc.cl") && !email.endsWith("@profesor.duoc.cl") && !email.endsWith("@gmail.com")) {
+        alert("El correo debe pertenecer a los dominios @duoc.cl, @profesor.duoc.cl o @gmail.com.")
+        return
+    }
+
     if (comentario === "") {
         alert("Debe ingresar un comentario.")
         return
