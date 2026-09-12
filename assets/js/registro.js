@@ -16,8 +16,34 @@ const inputEmail = document.getElementById("input-email")
 // Identificar el campo de contraseña.
 const inputPassword = document.getElementById("input-password")
 
+// Identificar los selectores de región y comuna.
+const inputRegion = document.getElementById("input-region")
+const inputComuna = document.getElementById("input-comuna")
+
 // Identificar el campo de dirección.
 const inputDireccion = document.getElementById("input-direccion")
+
+// Cargar las regiones disponibles en el primer selector.
+for (let posicion = 0; posicion < regionesComunas.length; posicion++) {
+    inputRegion.innerHTML = inputRegion.innerHTML + '<option value="' + posicion + '">' + regionesComunas[posicion].nombre + '</option>'
+}
+
+// Cambiar las comunas cuando la persona selecciona otra región.
+inputRegion.addEventListener("change", function() {
+    inputComuna.innerHTML = '<option value="">Seleccione una comuna</option>'
+
+    if (inputRegion.value === "") {
+        inputComuna.innerHTML = '<option value="">Seleccione primero una región</option>'
+        return
+    }
+
+    const regionSeleccionada = regionesComunas[Number(inputRegion.value)]
+
+    for (let posicion = 0; posicion < regionSeleccionada.comunas.length; posicion++) {
+        const comuna = regionSeleccionada.comunas[posicion]
+        inputComuna.innerHTML = inputComuna.innerHTML + '<option value="' + comuna + '">' + comuna + '</option>'
+    }
+})
 
 // Comprobar el formato y el dígito verificador de un RUN chileno.
 function validarRun(run) {
@@ -65,6 +91,8 @@ botonRegistro.addEventListener("click", function() {
     const apellidos = inputApellidos.value
     const email = inputEmail.value
     const password = inputPassword.value
+    const region = inputRegion.value
+    const comuna = inputComuna.value
     const direccion = inputDireccion.value
 
     if (run === "") {
@@ -104,6 +132,16 @@ botonRegistro.addEventListener("click", function() {
 
     if (password === "") {
         alert("Debe ingresar una contraseña.")
+        return
+    }
+
+    if (region === "") {
+        alert("Debe seleccionar una región.")
+        return
+    }
+
+    if (comuna === "") {
+        alert("Debe seleccionar una comuna.")
         return
     }
 
