@@ -16,6 +16,9 @@ const mensajeNombre = document.getElementById("mensaje-nombre")
 // Identificar el campo de apellidos.
 const inputApellidos = document.getElementById("input-apellidos")
 
+// Identificar el espacio para el mensaje de los apellidos.
+const mensajeApellidos = document.getElementById("mensaje-apellidos")
+
 // Identificar el campo de correo electrónico.
 const inputEmail = document.getElementById("input-email")
 
@@ -102,6 +105,7 @@ botonRegistro.addEventListener("click", function() {
     const direccion = inputDireccion.value
     mensajeRun.innerHTML = ""
     mensajeNombre.innerHTML = ""
+    mensajeApellidos.innerHTML = ""
 
     if (run === "") {
         mensajeRun.innerHTML = "Debe ingresar su RUN."
@@ -128,7 +132,14 @@ botonRegistro.addEventListener("click", function() {
     }
 
     if (apellidos === "") {
+        mensajeApellidos.innerHTML = "Debe ingresar sus apellidos."
         alert("Debe ingresar sus apellidos.")
+        return
+    }
+
+    if (apellidos.length > 100) {
+        mensajeApellidos.innerHTML = "Los apellidos no pueden superar los 100 caracteres."
+        alert("Los apellidos no pueden superar los 100 caracteres.")
         return
     }
 
