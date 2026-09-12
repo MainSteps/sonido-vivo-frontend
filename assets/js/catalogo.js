@@ -1,4 +1,9 @@
 import { PRODUCTOS } from "./contenido.js";
+const formatoPrecio = new Intl.NumberFormat("es-CL", {
+    style: "currency",
+    currency: "CLP",
+    maximumFractionDigits: 0
+});
 
 const listaProductos = document.querySelector("#lista-productos");
 
@@ -9,8 +14,8 @@ PRODUCTOS.forEach((producto) => {
         <img src="${producto.imagen}" alt="${producto.nombre}">
         <h2>${producto.nombre}</h2>
         <p>${producto.categoria}</p>
-        <p>$${producto.precio}</p>
-        <a href="producto.html?id=${producto.id}">Ver detalle</a>
+        <p>${formatoPrecio.format(producto.precio)}</p>
+        <a class="boton-principal" href="producto.html?id=${producto.id}">Ver detalle</a>
     `;
 
     listaProductos.appendChild(tarjeta);
