@@ -23,3 +23,16 @@ Este documento registra las pruebas de registro, acceso, contacto y administraci
 ## Evidencia inicial
 
 Los cuatro casos se ejecutaron en Chrome. El formulario detuvo las entradas inválidas y permitió el recorrido completo con datos de prueba.
+
+## Inicio de sesión
+
+| Caso | Entrada o acción | Resultado esperado | Resultado obtenido | Estado |
+| --- | --- | --- | --- | --- |
+| ACC-01 | Dejar el correo vacío | Indicar que el correo es obligatorio | Aparece el mensaje debajo del correo | Aprobado |
+| ACC-02 | Escribir `michel@otro.cl` | Rechazar un dominio no permitido | Aparece el mensaje con los dominios permitidos | Aprobado |
+| ACC-03 | Escribir una contraseña de 3 caracteres | Rechazar una contraseña demasiado corta | Aparece el mensaje de 4 a 10 caracteres | Aprobado |
+| ACC-04 | Escribir una contraseña de 4 caracteres | Aceptar el límite mínimo | Aparece el mensaje de acceso simulado | Aprobado |
+| ACC-05 | Escribir una contraseña de 10 caracteres | Aceptar el límite máximo | Aparece el mensaje de acceso simulado | Aprobado |
+| ACC-06 | Escribir una contraseña de 11 caracteres | Rechazar una contraseña demasiado larga | Aparece el mensaje de 4 a 10 caracteres | Aprobado |
+
+Los seis casos se ejecutaron en Chrome y se comprobaron los mensajes mostrados por JavaScript.
