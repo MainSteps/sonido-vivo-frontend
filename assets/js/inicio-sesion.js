@@ -17,8 +17,18 @@ botonInicioSesion.addEventListener("click", function() {
         return
     }
 
+    if (email.length > 100) {
+        alert("El correo electrónico no puede superar los 100 caracteres.")
+        return
+    }
+
     if (password === "") {
         alert("Debe ingresar su contraseña.")
+        return
+    }
+
+    if (password.length < 4 || password.length > 10) {
+        alert("La contraseña debe tener entre 4 y 10 caracteres.")
         return
     }
 
