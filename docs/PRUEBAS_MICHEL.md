@@ -77,3 +77,15 @@ Los cinco casos se ejecutaron en Chrome. Cada cambio de región actualizó las c
 | USU-09 | Cambiar el rol Cliente por Administrador | Confirmar una edición simulada | Se aclara que no se modificó un usuario real | Aprobado |
 
 Los nueve casos se ejecutaron en Chrome. Los datos permanecieron simulados y no se almacenaron contraseñas ni usuarios reales.
+
+## Navegación
+
+| Caso | Entrada o acción | Resultado esperado | Resultado obtenido | Estado |
+| --- | --- | --- | --- | --- |
+| NAV-01 | Abrir Registro, Inicio de sesión y Contacto | Cargar las tres páginas públicas | Las páginas respondieron correctamente y mostraron su título | Aprobado |
+| NAV-02 | Entrar desde Registro a Administrar usuarios | Abrir el listado de usuarios | Se abrió la página Usuarios de Sonido Vivo | Aprobado |
+| NAV-03 | Abrir Crear usuario desde el listado | Mostrar el formulario de creación | El formulario se cargó sin errores JavaScript | Aprobado |
+| NAV-04 | Abrir Ver usuario desde el listado | Mostrar el selector y el detalle | La página se cargó sin errores JavaScript | Aprobado |
+| NAV-05 | Abrir Editar usuario | Mostrar el formulario de edición | La página se cargó sin errores JavaScript | Aprobado |
+
+Las siete páginas del alcance de Michel se abrieron mediante HTTP y no se detectaron errores de JavaScript durante la navegación.
