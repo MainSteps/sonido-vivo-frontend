@@ -10,11 +10,15 @@ const mensajeEmailLogin = document.getElementById("mensaje-email-login")
 // Identificar el campo de contraseña.
 const inputPasswordLogin = document.getElementById("input-password-login")
 
+// Identificar el espacio para el mensaje de la contraseña.
+const mensajePasswordLogin = document.getElementById("mensaje-password-login")
+
 // Mostrar un aviso de demostración al hacer clic.
 botonInicioSesion.addEventListener("click", function() {
     const email = inputEmailLogin.value
     const password = inputPasswordLogin.value
     mensajeEmailLogin.innerHTML = ""
+    mensajePasswordLogin.innerHTML = ""
 
     if (email === "") {
         mensajeEmailLogin.innerHTML = "Debe ingresar su correo electrónico."
@@ -35,11 +39,13 @@ botonInicioSesion.addEventListener("click", function() {
     }
 
     if (password === "") {
+        mensajePasswordLogin.innerHTML = "Debe ingresar su contraseña."
         alert("Debe ingresar su contraseña.")
         return
     }
 
     if (password.length < 4 || password.length > 10) {
+        mensajePasswordLogin.innerHTML = "La contraseña debe tener entre 4 y 10 caracteres."
         alert("La contraseña debe tener entre 4 y 10 caracteres.")
         return
     }
