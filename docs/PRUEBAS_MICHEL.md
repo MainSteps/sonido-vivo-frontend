@@ -89,3 +89,14 @@ Los nueve casos se ejecutaron en Chrome. Los datos permanecieron simulados y no 
 | NAV-05 | Abrir Editar usuario | Mostrar el formulario de edición | La página se cargó sin errores JavaScript | Aprobado |
 
 Las siete páginas del alcance de Michel se abrieron mediante HTTP y no se detectaron errores de JavaScript durante la navegación.
+
+## Resumen de resultados
+
+- Casos ejecutados: 35.
+- Casos aprobados: 35.
+- Casos rechazados: 0.
+- Errores de JavaScript encontrados: 0.
+- Enlaces rotos encontrados: 0.
+- Issues nuevas por defectos: 0, porque las pruebas no encontraron errores reproducibles dentro de este alcance.
+
+Las pruebas cubren recorridos normales y casos límite de registro, acceso, contacto, región y comuna, administración de usuarios y navegación. La revisión de integración con catálogo, carrito y páginas compartidas deberá repetirse cuando esas ramas estén incorporadas en `main`.
