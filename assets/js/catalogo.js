@@ -10,6 +10,7 @@ PRODUCTOS.forEach((producto) => {
         <h2>${producto.nombre}</h2>
         <p>${producto.categoria}</p>
         <p>$${producto.precio}</p>
+        <a href="producto.html?id=${producto.id}">Ver detalle</a>
     `;
 
     listaProductos.appendChild(tarjeta);
