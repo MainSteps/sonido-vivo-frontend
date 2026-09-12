@@ -4,6 +4,9 @@ const botonRegistro = document.getElementById("btn-registro")
 // Identificar el campo RUN.
 const inputRun = document.getElementById("input-run")
 
+// Identificar el espacio para el mensaje del RUN.
+const mensajeRun = document.getElementById("mensaje-run")
+
 // Identificar el campo de nombre.
 const inputNombre = document.getElementById("input-nombre")
 
@@ -94,13 +97,16 @@ botonRegistro.addEventListener("click", function() {
     const region = inputRegion.value
     const comuna = inputComuna.value
     const direccion = inputDireccion.value
+    mensajeRun.innerHTML = ""
 
     if (run === "") {
+        mensajeRun.innerHTML = "Debe ingresar su RUN."
         alert("Debe ingresar su RUN.")
         return
     }
 
     if (!validarRun(run)) {
+        mensajeRun.innerHTML = "Escriba un RUN válido, sin puntos ni guion."
         alert("El RUN debe tener entre 7 y 9 caracteres, escribirse sin puntos ni guion y tener un dígito verificador válido.")
         return
     }
