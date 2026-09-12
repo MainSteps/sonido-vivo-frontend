@@ -61,3 +61,19 @@ Los seis casos se ejecutaron en Chrome. El formulario aceptó el correo vacío y
 | UBI-05 | Seleccionar Región Metropolitana y Santiago | Permitir completar el recorrido | Aparece el mensaje de registro simulado | Aprobado |
 
 Los cinco casos se ejecutaron en Chrome. Cada cambio de región actualizó las comunas y eliminó la selección anterior incompatible.
+
+## Mantenedor de usuarios
+
+| Caso | Entrada o acción | Resultado esperado | Resultado obtenido | Estado |
+| --- | --- | --- | --- | --- |
+| USU-01 | Abrir el listado | Mostrar tres usuarios ficticios y sus roles | Aparecen Administrador, Vendedor y Cliente | Aprobado |
+| USU-02 | Intentar crear sin completar campos | Detener la operación | Aparece el mensaje de campos obligatorios | Aprobado |
+| USU-03 | Crear con RUN de dígito incorrecto | Rechazar el RUN | Aparece el mensaje de dígito verificador | Aprobado |
+| USU-04 | Crear con dominio no permitido | Rechazar el correo | Aparece el mensaje de dominios permitidos | Aprobado |
+| USU-05 | Completar correctamente la creación | Confirmar una operación simulada | Se aclara que no se guardó un usuario real | Aprobado |
+| USU-06 | Seleccionar los tres usuarios en la vista de detalle | Mostrar los datos y el rol correspondiente | Se muestran Administrador, Vendedor y Cliente | Aprobado |
+| USU-07 | Intentar editar sin seleccionar usuario | Detener la operación | Aparece el mensaje de selección obligatoria | Aprobado |
+| USU-08 | Editar con dominio no permitido | Rechazar el correo | Aparece el mensaje de dominios permitidos | Aprobado |
+| USU-09 | Cambiar el rol Cliente por Administrador | Confirmar una edición simulada | Se aclara que no se modificó un usuario real | Aprobado |
+
+Los nueve casos se ejecutaron en Chrome. Los datos permanecieron simulados y no se almacenaron contraseñas ni usuarios reales.
