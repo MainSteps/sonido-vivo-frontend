@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Crear usuario - Sonido Vivo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>Sonido Vivo</h1>
+            <p>Administración de usuarios simulados</p>
+        </header>
+
+        <nav>
+            <a href="usuarios.html">Volver al listado</a> |
+            <a href="../registro.html">Registro público</a>
+        </nav>
+
+        <main>
+            <section>
+                <h2>Crear usuario</h2>
+                <p>Complete el formulario solamente con datos de demostración.</p>
+                <form>
+                    <div>
+                        <label for="crear-run">RUN (sin puntos ni guion)</label><br>
+                        <input id="crear-run" type="text" minlength="7" maxlength="9" />
+                    </div>
+                    <div>
+                        <label for="crear-nombre">Nombre</label><br>
+                        <input id="crear-nombre" type="text" maxlength="50" />
+                    </div>
+                    <div>
+                        <label for="crear-apellidos">Apellidos</label><br>
+                        <input id="crear-apellidos" type="text" maxlength="100" />
+                    </div>
+                    <div>
+                        <label for="crear-email">Correo electrónico</label><br>
+                        <input id="crear-email" type="email" maxlength="100" />
+                    </div>
+                    <div>
+                        <label for="crear-password">Contraseña de demostración</label><br>
+                        <input id="crear-password" type="password" minlength="4" maxlength="10" />
+                    </div>
+                    <div>
+                        <label for="crear-rol">Rol</label><br>
+                        <select id="crear-rol">
+                            <option value="">Seleccione un rol</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Vendedor">Vendedor</option>
+                            <option value="Cliente">Cliente</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="crear-region">Región</label><br>
+                        <select id="crear-region">
+                            <option value="">Seleccione una región</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="crear-comuna">Comuna</label><br>
+                        <select id="crear-comuna">
+                            <option value="">Seleccione primero una región</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="crear-direccion">Dirección</label><br>
+                        <input id="crear-direccion" type="text" maxlength="300" />
+                    </div>
+                    <button id="btn-crear-usuario" type="button">Crear usuario simulado</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>Diego, Matías y Michel - 2026</p>
+        </footer>
+        <script src="../assets/js/data/regiones-comunas.js"></script>
+        <script src="../assets/js/admin-usuario-crear.js"></script>
+    </body>
+</html>
