@@ -36,3 +36,16 @@ Los cuatro casos se ejecutaron en Chrome. El formulario detuvo las entradas inv�
 | ACC-06 | Escribir una contraseña de 11 caracteres | Rechazar una contraseña demasiado larga | Aparece el mensaje de 4 a 10 caracteres | Aprobado |
 
 Los seis casos se ejecutaron en Chrome y se comprobaron los mensajes mostrados por JavaScript.
+
+## Contacto
+
+| Caso | Entrada o acción | Resultado esperado | Resultado obtenido | Estado |
+| --- | --- | --- | --- | --- |
+| CON-01 | Dejar el nombre vacío | Indicar que el nombre es obligatorio | Aparece el mensaje debajo del nombre | Aprobado |
+| CON-02 | Dejar el comentario vacío | Indicar que el comentario es obligatorio | Aparece el mensaje debajo del comentario | Aprobado |
+| CON-03 | Escribir `michel@otro.cl` | Rechazar un dominio no permitido | Aparece el mensaje con los dominios permitidos | Aprobado |
+| CON-04 | Dejar el correo vacío y completar los campos obligatorios | Aceptar el correo opcional | Aparece el mensaje de envío simulado | Aprobado |
+| CON-05 | Escribir un comentario de 500 caracteres | Aceptar el límite máximo | Aparece el mensaje de envío simulado | Aprobado |
+| CON-06 | Escribir un comentario de 501 caracteres | Rechazar el comentario demasiado largo | Aparece el mensaje de máximo 500 caracteres | Aprobado |
+
+Los seis casos se ejecutaron en Chrome. El formulario aceptó el correo vacío y detuvo las entradas inválidas.
