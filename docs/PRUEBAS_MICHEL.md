@@ -49,3 +49,15 @@ Los seis casos se ejecutaron en Chrome y se comprobaron los mensajes mostrados p
 | CON-06 | Escribir un comentario de 501 caracteres | Rechazar el comentario demasiado largo | Aparece el mensaje de máximo 500 caracteres | Aprobado |
 
 Los seis casos se ejecutaron en Chrome. El formulario aceptó el correo vacío y detuvo las entradas inválidas.
+
+## Región y comuna
+
+| Caso | Entrada o acción | Resultado esperado | Resultado obtenido | Estado |
+| --- | --- | --- | --- | --- |
+| UBI-01 | Intentar registrarse sin seleccionar región | Detener el registro y solicitar una región | Aparece el mensaje debajo del selector de región | Aprobado |
+| UBI-02 | Seleccionar Región de Valparaíso | Mostrar solamente sus comunas de demostración | Aparecen Valparaíso, Viña del Mar, Quilpué, Villa Alemana y Concón | Aprobado |
+| UBI-03 | No seleccionar una comuna | Detener el registro y solicitar una comuna | Aparece el mensaje debajo del selector de comuna | Aprobado |
+| UBI-04 | Elegir Viña del Mar y después cambiar a Región Metropolitana | Limpiar la comuna anterior y cargar las nuevas opciones | Viña del Mar se elimina, el valor queda vacío y aparece Santiago | Aprobado |
+| UBI-05 | Seleccionar Región Metropolitana y Santiago | Permitir completar el recorrido | Aparece el mensaje de registro simulado | Aprobado |
+
+Los cinco casos se ejecutaron en Chrome. Cada cambio de región actualizó las comunas y eliminó la selección anterior incompatible.
