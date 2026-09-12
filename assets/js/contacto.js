@@ -16,6 +16,9 @@ const mensajeEmailContacto = document.getElementById("mensaje-email-contacto")
 // Identificar el campo de comentario.
 const inputComentario = document.getElementById("input-comentario")
 
+// Identificar el espacio para el mensaje del comentario.
+const mensajeComentario = document.getElementById("mensaje-comentario")
+
 // Comprobar los campos cuando se hace clic en el botón.
 botonContacto.addEventListener("click", function() {
     const nombre = inputNombreContacto.value
@@ -23,6 +26,7 @@ botonContacto.addEventListener("click", function() {
     const comentario = inputComentario.value
     mensajeNombreContacto.innerHTML = ""
     mensajeEmailContacto.innerHTML = ""
+    mensajeComentario.innerHTML = ""
 
     if (nombre === "") {
         mensajeNombreContacto.innerHTML = "Debe ingresar su nombre."
@@ -49,11 +53,13 @@ botonContacto.addEventListener("click", function() {
     }
 
     if (comentario === "") {
+        mensajeComentario.innerHTML = "Debe ingresar un comentario."
         alert("Debe ingresar un comentario.")
         return
     }
 
     if (comentario.length > 500) {
+        mensajeComentario.innerHTML = "El comentario no puede superar los 500 caracteres."
         alert("El comentario no puede superar los 500 caracteres.")
         return
     }
