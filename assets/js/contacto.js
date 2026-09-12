@@ -7,10 +7,14 @@ const inputNombreContacto = document.getElementById("input-nombre-contacto")
 // Identificar el campo de correo electrónico.
 const inputEmailContacto = document.getElementById("input-email-contacto")
 
+// Identificar el campo de comentario.
+const inputComentario = document.getElementById("input-comentario")
+
 // Comprobar los campos cuando se hace clic en el botón.
 botonContacto.addEventListener("click", function() {
     const nombre = inputNombreContacto.value
     const email = inputEmailContacto.value
+    const comentario = inputComentario.value
 
     if (nombre === "") {
         alert("Debe ingresar su nombre.")
@@ -22,5 +26,10 @@ botonContacto.addEventListener("click", function() {
         return
     }
 
-    alert("Demostración de Sonido Vivo: nombre y correo están completados. Las demás validaciones están pendientes y no se envió la consulta.")
+    if (comentario === "") {
+        alert("Debe ingresar un comentario.")
+        return
+    }
+
+    alert("Demostración de Sonido Vivo: los campos están completados, pero no se envió una consulta real.")
 })
