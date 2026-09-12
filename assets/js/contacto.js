@@ -4,6 +4,9 @@ const botonContacto = document.getElementById("btn-contacto")
 // Identificar el campo de nombre.
 const inputNombreContacto = document.getElementById("input-nombre-contacto")
 
+// Identificar el espacio para el mensaje del nombre.
+const mensajeNombreContacto = document.getElementById("mensaje-nombre-contacto")
+
 // Identificar el campo de correo electrónico opcional.
 const inputEmailContacto = document.getElementById("input-email-contacto")
 
@@ -15,13 +18,16 @@ botonContacto.addEventListener("click", function() {
     const nombre = inputNombreContacto.value
     const email = inputEmailContacto.value
     const comentario = inputComentario.value
+    mensajeNombreContacto.innerHTML = ""
 
     if (nombre === "") {
+        mensajeNombreContacto.innerHTML = "Debe ingresar su nombre."
         alert("Debe ingresar su nombre.")
         return
     }
 
     if (nombre.length > 100) {
+        mensajeNombreContacto.innerHTML = "El nombre no puede superar los 100 caracteres."
         alert("El nombre no puede superar los 100 caracteres.")
         return
     }
