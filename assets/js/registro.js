@@ -21,16 +21,21 @@ const mensajeApellidos = document.getElementById("mensaje-apellidos")
 
 // Identificar el campo de correo electrónico.
 const inputEmail = document.getElementById("input-email")
+const mensajeEmail = document.getElementById("mensaje-email")
 
 // Identificar el campo de contraseña.
 const inputPassword = document.getElementById("input-password")
+const mensajePassword = document.getElementById("mensaje-password")
 
 // Identificar los selectores de región y comuna.
 const inputRegion = document.getElementById("input-region")
 const inputComuna = document.getElementById("input-comuna")
+const mensajeRegion = document.getElementById("mensaje-region")
+const mensajeComuna = document.getElementById("mensaje-comuna")
 
 // Identificar el campo de dirección.
 const inputDireccion = document.getElementById("input-direccion")
+const mensajeDireccion = document.getElementById("mensaje-direccion")
 
 // Cargar las regiones disponibles en el primer selector.
 for (let posicion = 0; posicion < regionesComunas.length; posicion++) {
@@ -106,6 +111,11 @@ botonRegistro.addEventListener("click", function() {
     mensajeRun.innerHTML = ""
     mensajeNombre.innerHTML = ""
     mensajeApellidos.innerHTML = ""
+    mensajeEmail.innerHTML = ""
+    mensajePassword.innerHTML = ""
+    mensajeRegion.innerHTML = ""
+    mensajeComuna.innerHTML = ""
+    mensajeDireccion.innerHTML = ""
 
     if (run === "") {
         mensajeRun.innerHTML = "Debe ingresar su RUN."
@@ -144,37 +154,56 @@ botonRegistro.addEventListener("click", function() {
     }
 
     if (email === "") {
+        mensajeEmail.innerHTML = "Debe ingresar su correo electrónico."
         alert("Debe ingresar su correo electrónico.")
         return
     }
 
     if (email.length > 100) {
+        mensajeEmail.innerHTML = "El correo electrónico no puede superar los 100 caracteres."
         alert("El correo electrónico no puede superar los 100 caracteres.")
         return
     }
 
     if (!email.endsWith("@duoc.cl") && !email.endsWith("@profesor.duoc.cl") && !email.endsWith("@gmail.com")) {
+        mensajeEmail.innerHTML = "Use un correo @duoc.cl, @profesor.duoc.cl o @gmail.com."
         alert("El correo debe pertenecer a los dominios @duoc.cl, @profesor.duoc.cl o @gmail.com.")
         return
     }
 
     if (password === "") {
+        mensajePassword.innerHTML = "Debe ingresar una contraseña."
         alert("Debe ingresar una contraseña.")
         return
     }
 
+    if (password.length < 4 || password.length > 10) {
+        mensajePassword.innerHTML = "La contraseña debe tener entre 4 y 10 caracteres."
+        alert("La contraseña debe tener entre 4 y 10 caracteres.")
+        return
+    }
+
     if (region === "") {
+        mensajeRegion.innerHTML = "Debe seleccionar una región."
         alert("Debe seleccionar una región.")
         return
     }
 
     if (comuna === "") {
+        mensajeComuna.innerHTML = "Debe seleccionar una comuna."
         alert("Debe seleccionar una comuna.")
         return
     }
 
     if (direccion === "") {
+        mensajeDireccion.innerHTML = "Debe ingresar su dirección."
         alert("Debe ingresar su dirección.")
+        return
+    }
+
+    if (direccion.length > 300) {
+        mensajeDireccion.innerHTML = "La dirección no puede superar los 300 caracteres."
+        alert("La dirección no puede superar los 300 caracteres.")
         return
     }
 

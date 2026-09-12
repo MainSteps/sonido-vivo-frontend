@@ -43,10 +43,12 @@
                     <div>
                         <label for="input-email">Correo electrónico</label><br>
                         <input id="input-email" type="email" maxlength="100" placeholder="Ingrese su correo electrónico" />
+                        <p id="mensaje-email"></p>
                     </div>
                     <div>
                         <label for="input-password">Contraseña</label><br>
                         <input id="input-password" type="password" minlength="4" maxlength="10" placeholder="Ingrese una contraseña de prueba" />
+                        <p id="mensaje-password"></p>
                     </div>
                     <div>
                         <label for="input-fecha-nacimiento">Fecha de nacimiento (opcional)</label><br>
@@ -57,16 +59,19 @@
                         <select id="input-region">
                             <option value="">Seleccione una región</option>
                         </select>
+                        <p id="mensaje-region"></p>
                     </div>
                     <div>
                         <label for="input-comuna">Comuna</label><br>
                         <select id="input-comuna">
                             <option value="">Seleccione primero una región</option>
                         </select>
+                        <p id="mensaje-comuna"></p>
                     </div>
                     <div>
                         <label for="input-direccion">Dirección</label><br>
                         <input id="input-direccion" type="text" maxlength="300" placeholder="Ingrese una dirección de prueba" />
+                        <p id="mensaje-direccion"></p>
                     </div>
                     <!-- Botón conectado al archivo JavaScript de registro -->
                     <button id="btn-registro" type="button">Registrarse</button>
