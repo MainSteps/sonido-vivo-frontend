@@ -5,7 +5,7 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
-main {
+.catalogo-main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 3rem 1rem;
@@ -117,4 +117,41 @@ p {
     #lista-productos {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+}
+
+.boton-secundario {
+    display: inline-block;
+    min-height: 44px;
+    margin: 1rem 1rem 1rem 0;
+    padding: 0.75rem 1rem;
+    border: 1px solid #514D5D;
+    border-radius: 8px;
+    color: #F7F5FA;
+    background: transparent;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.boton-secundario:hover {
+    background-color: #24232E;
+}
+
+.selector-cantidad {
+    display: grid;
+    gap: .35rem;
+    margin: 1rem;
+    color: #BDB8C7;
+    font-weight: 700;
+}
+
+.selector-cantidad input {
+    width: 6rem;
+    min-height: 44px;
+    padding: .5rem;
+    border: 1px solid #514D5D;
+    border-radius: 8px;
+    color: #F7F5FA;
+    background: #0B0B10;
+    font: inherit;
 }
