@@ -10,6 +10,9 @@ const mensajeRun = document.getElementById("mensaje-run")
 // Identificar el campo de nombre.
 const inputNombre = document.getElementById("input-nombre")
 
+// Identificar el espacio para el mensaje del nombre.
+const mensajeNombre = document.getElementById("mensaje-nombre")
+
 // Identificar el campo de apellidos.
 const inputApellidos = document.getElementById("input-apellidos")
 
@@ -98,6 +101,7 @@ botonRegistro.addEventListener("click", function() {
     const comuna = inputComuna.value
     const direccion = inputDireccion.value
     mensajeRun.innerHTML = ""
+    mensajeNombre.innerHTML = ""
 
     if (run === "") {
         mensajeRun.innerHTML = "Debe ingresar su RUN."
@@ -112,7 +116,14 @@ botonRegistro.addEventListener("click", function() {
     }
 
     if (nombre === "") {
+        mensajeNombre.innerHTML = "Debe ingresar su nombre."
         alert("Debe ingresar su nombre.")
+        return
+    }
+
+    if (nombre.length > 50) {
+        mensajeNombre.innerHTML = "El nombre no puede superar los 50 caracteres."
+        alert("El nombre no puede superar los 50 caracteres.")
         return
     }
 
