@@ -20,3 +20,38 @@ p {
     color: #BDB8C7;
     line-height: 1.5;
 }
+#lista-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+#lista-productos article {
+    overflow: hidden;
+    background-color: #17171F;
+    border: 1px solid #24232E;
+    border-radius: 12px;
+}
+
+#lista-productos img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+#lista-productos h2 {
+    margin: 1rem 1rem 0.5rem;
+    font-size: 1.25rem;
+}
+
+#lista-productos p {
+    margin: 0.5rem 1rem;
+}
+
+#lista-productos p:last-child {
+    margin-bottom: 1rem;
+    color: #F04483;
+    font-weight: 700;
+}
