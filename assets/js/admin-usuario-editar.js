@@ -40,5 +40,17 @@ botonEditarUsuario.addEventListener("click", function() {
         return
     }
 
+    if (editarNombre.value.length > 50 || editarApellidos.value.length > 100) {
+        alert("Revise los límites del nombre y los apellidos.")
+        return
+    }
+
+    const email = editarEmail.value
+
+    if (email.length > 100 || (!email.endsWith("@duoc.cl") && !email.endsWith("@profesor.duoc.cl") && !email.endsWith("@gmail.com"))) {
+        alert("Ingrese un correo válido de los dominios permitidos.")
+        return
+    }
+
     alert("Demostración de Sonido Vivo: los cambios están completos, pero no se modificó un usuario real.")
 })
