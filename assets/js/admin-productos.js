@@ -133,6 +133,39 @@ function mostrarErrores(errores) {
     return Object.keys(errores).length === 0;
 }
 
+function obtenerProductoFormulario() {
+    return {
+        id: campoCodigo.value.trim(),
+        nombre: campoNombre.value.trim(),
+        precio: Number(campoPrecio.value),
+        stock: Number(campoStock.value),
+        categoria: campoCategoria.value,
+        imagen: "assets/images/hero-sonido-vivo.svg",
+        descripcion: "Producto simulado registrado desde el mantenedor."
+    };
+}
+
+
+function guardarProducto(productoFormulario) {
+    if (idProductoEnEdicion) {
+        const indice = PRODUCTOS.findIndex(
+            (item) => item.id === idProductoEnEdicion
+        );
+
+        if (indice !== -1) {
+            PRODUCTOS[indice] = {
+                ...PRODUCTOS[indice],
+                ...productoFormulario
+            };
+        }
+    } else {
+        PRODUCTOS.push(productoFormulario);
+    }
+
+    renderizarProductos();
+    cancelarEdicion();
+}
+
 
 
 function renderizarProductos() {
@@ -192,8 +225,11 @@ formularioProducto.addEventListener("submit", (event) => {
         return;
     }
 
-    console.log("Formulario válido");
-});
+    const productoFormulario = obtenerProductoFormulario();
+
+    guardarProducto(productoFormulario);
+
+    });
 
 
 
