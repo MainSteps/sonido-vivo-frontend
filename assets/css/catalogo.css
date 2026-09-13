@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    background-color: #0B0B10;
+    color: #F7F5FA;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+h1 {
+    margin: 0;
+    color: #F7F5FA;
+}
+
+p {
+    color: #BDB8C7;
+    line-height: 1.5;
+}
+#lista-productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+#lista-productos article {
+    overflow: hidden;
+    background-color: #17171F;
+    border: 1px solid #24232E;
+    border-radius: 12px;
+}
+
+#lista-productos img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+#lista-productos h2 {
+    margin: 1rem 1rem 0.5rem;
+    font-size: 1.25rem;
+}
+
+#lista-productos p {
+    margin: 0.5rem 1rem;
+}
+
+#lista-productos p:last-child {
+    margin-bottom: 1rem;
+    color: #F04483;
+    font-weight: 700;
+}
+* {
+    box-sizing: border-box;
+}
+
+.boton-principal {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: #F04483;
+    color: #F7F5FA;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.boton-principal:hover {
+    background-color: #FF6098;
+}
+
+#detalle-producto {
+    max-width: 720px;
+    margin: 2rem auto 0;
+}
+
+.detalle-producto {
+    overflow: hidden;
+    background-color: #17171F;
+    border: 1px solid #24232E;
+    border-radius: 12px;
+}
+
+.detalle-producto img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.detalle-producto h2,
+.detalle-producto p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.detalle-producto h2 {
+    margin-top: 1rem;
+}
+
+.detalle-producto p:last-of-type {
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+    #lista-productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 960px) {
+    #lista-productos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
