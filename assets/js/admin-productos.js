@@ -17,7 +17,26 @@ const botonCancelarEdicion = document.querySelector(
     "#cancelar-edicion"
 );
 
+const confirmacionEliminacion = document.querySelector(
+    "#confirmacion-eliminacion"
+);
+
+const mensajeConfirmacion = document.querySelector(
+    "#mensaje-confirmacion"
+);
+
+const botonConfirmarEliminacion = document.querySelector(
+    "#confirmar-eliminacion"
+);
+
+const botonCancelarEliminacion = document.querySelector(
+    "#cancelar-eliminacion"
+);
+
+
 let idProductoEnEdicion = null;
+
+let idProductoParaEliminar = null;
 
 
 const formatoPrecio = new Intl.NumberFormat("es-CL", {
@@ -73,6 +92,51 @@ function cancelarEdicion() {
     botonGuardar.textContent = "Guardar producto";
     botonCancelarEdicion.hidden = true;
 }
+
+function solicitarEliminacion(idProducto) {
+    const producto = PRODUCTOS.find(
+        (item) => item.id === idProducto
+    );
+
+    if (!producto) {
+        return;
+    }
+
+    idProductoParaEliminar = producto.id;
+
+    mensajeConfirmacion.textContent =
+        `¿Deseas eliminar "${producto.nombre}"?`;
+
+    confirmacionEliminacion.hidden = false;
+}
+
+function cancelarEliminacion() {
+    idProductoParaEliminar = null;
+
+    mensajeConfirmacion.textContent = "";
+
+    confirmacionEliminacion.hidden = true;
+}
+
+
+function confirmarEliminacion() {
+    const indice = PRODUCTOS.findIndex(
+        (item) => item.id === idProductoParaEliminar
+    );
+
+    if (indice === -1) {
+        cancelarEliminacion();
+        return;
+    }
+
+    PRODUCTOS.splice(indice, 1);
+
+    renderizarProductos();
+    cancelarEliminacion();
+}
+
+
+
 
 function validarFormulario() {
     const errores = {};
@@ -194,6 +258,11 @@ function renderizarProductos() {
             producto.id
         );
 
+        botonEliminar.addEventListener("click", () => {
+            solicitarEliminacion(producto.id);
+        });
+
+
         celdaAcciones.append(botonEditar, botonEliminar);
 
 
@@ -214,6 +283,17 @@ botonCancelarEdicion.addEventListener(
     "click",
     cancelarEdicion
 );
+
+botonCancelarEliminacion.addEventListener(
+    "click",
+    cancelarEliminacion
+);
+
+botonConfirmarEliminacion.addEventListener(
+    "click",
+    confirmarEliminacion
+);
+
 
 formularioProducto.addEventListener("submit", (event) => {
     event.preventDefault();
