@@ -175,7 +175,20 @@ function validarFormulario() {
         errores.categoria = "Debes seleccionar una categoría.";
     }
 
+    const productoConMismoCodigo = PRODUCTOS.find(
+        (item) =>
+            item.id === codigo &&
+            item.id !== idProductoEnEdicion
+    );
+
+    if (codigo.length >= 3 && productoConMismoCodigo) {
+        errores.codigo = "Ya existe un producto con ese código.";
+    }
+
     return errores;
+
+
+
 }
 
 function mostrarErrores(errores) {
