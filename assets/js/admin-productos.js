@@ -74,6 +74,66 @@ function cancelarEdicion() {
     botonCancelarEdicion.hidden = true;
 }
 
+function validarFormulario() {
+    const errores = {};
+
+    const codigo = campoCodigo.value.trim();
+    const nombre = campoNombre.value.trim();
+    const precio = Number(campoPrecio.value);
+    const stock = Number(campoStock.value);
+    const categoria = campoCategoria.value;
+
+    if (codigo.length < 3) {
+        errores.codigo = "El código debe tener al menos 3 caracteres.";
+    }
+
+    if (nombre.length === 0 || nombre.length > 100) {
+        errores.nombre = "El nombre es obligatorio y debe tener máximo 100 caracteres.";
+    }
+
+    if (
+        campoPrecio.value === "" ||
+        Number.isNaN(precio) ||
+        precio < 0
+    ) {
+        errores.precio = "El precio debe ser un número mayor o igual a 0.";
+    }
+
+    if (
+        campoStock.value === "" ||
+        !Number.isInteger(stock) ||
+        stock < 0
+    ) {
+        errores.stock = "El stock debe ser un entero mayor o igual a 0.";
+    }
+
+    if (categoria === "") {
+        errores.categoria = "Debes seleccionar una categoría.";
+    }
+
+    return errores;
+}
+
+function mostrarErrores(errores) {
+    document.querySelector("#error-codigo").textContent =
+        errores.codigo || "";
+
+    document.querySelector("#error-nombre").textContent =
+        errores.nombre || "";
+
+    document.querySelector("#error-precio").textContent =
+        errores.precio || "";
+
+    document.querySelector("#error-stock").textContent =
+        errores.stock || "";
+
+    document.querySelector("#error-categoria").textContent =
+        errores.categoria || "";
+
+    return Object.keys(errores).length === 0;
+}
+
+
 
 function renderizarProductos() {
     listaAdminProductos.innerHTML = "";
@@ -121,6 +181,20 @@ botonCancelarEdicion.addEventListener(
     "click",
     cancelarEdicion
 );
+
+formularioProducto.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const errores = validarFormulario();
+    const formularioValido = mostrarErrores(errores);
+
+    if (!formularioValido) {
+        return;
+    }
+
+    console.log("Formulario válido");
+});
+
 
 
 renderizarProductos();
