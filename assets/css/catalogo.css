@@ -118,3 +118,34 @@ p {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
+
+.tabla-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid #24232E;
+    border-radius: 8px;
+}
+
+.tabla-responsive table {
+    width: max-content;
+    min-width: 700px;
+    border-collapse: collapse;
+}
+
+.tabla-responsive th,
+.tabla-responsive td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #24232E;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.tabla-responsive th {
+    color: #F04483;
+}
+
+.tabla-responsive td button {
+    margin-right: 0.5rem;
+}
