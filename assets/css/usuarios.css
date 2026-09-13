@@ -1,0 +1,8 @@
+.tabla-usuarios {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-usuarios table {
+    width: 100%;
+}
