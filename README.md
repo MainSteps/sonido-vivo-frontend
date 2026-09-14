@@ -32,6 +32,8 @@ ArgOS participa como coordinador operativo y revisor técnico común. No reempla
 
 Consulta [CONTRIBUTING.md](CONTRIBUTING.md) para el procedimiento completo y [docs/PLAN_OPERATIVO.md](docs/PLAN_OPERATIVO.md) para el tablero previsto.
 
+La propuesta parcial de requisitos se encuentra en [docs/ERS.md](docs/ERS.md).
+
 ## Seguridad académica
 
 Este frontend usa datos simulados. No se deben guardar contraseñas reales, datos personales reales, tokens ni archivos de credenciales. El proyecto debe probarse mediante un servidor HTTP local, no abriendo los archivos directamente con `file://`.
