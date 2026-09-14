@@ -1,6 +1,11 @@
 // Identificar el botón, como en el ejemplo de la Clase 6.
 const botonInicioSesion = document.getElementById("btn-inicio-sesion")
 
+const formularioInicioSesion = document.querySelector(
+    ".formulario-simulacion"
+)
+
+
 // Identificar el campo de correo.
 const inputEmailLogin = document.getElementById("input-email-login")
 
@@ -14,7 +19,11 @@ const inputPasswordLogin = document.getElementById("input-password-login")
 const mensajePasswordLogin = document.getElementById("mensaje-password-login")
 
 // Mostrar un aviso de demostración al hacer clic.
-botonInicioSesion.addEventListener("click", function() {
+formularioInicioSesion.addEventListener(
+    "submit",
+    function(event) {
+        event.preventDefault()
+
     const email = inputEmailLogin.value
     const password = inputPasswordLogin.value
     mensajeEmailLogin.innerHTML = ""

@@ -1,6 +1,12 @@
 // Identificar el botón de registro, como en el ejemplo de la Clase 6.
 const botonRegistro = document.getElementById("btn-registro")
 
+
+const formularioRegistro = document.querySelector(
+    ".formulario-simulacion"
+)
+
+
 // Identificar el campo RUN.
 const inputRun = document.getElementById("input-run")
 
@@ -99,7 +105,9 @@ function validarRun(run) {
 }
 
 // Comprobar los campos cuando se hace clic en el botón.
-botonRegistro.addEventListener("click", function() {
+formularioRegistro.addEventListener("submit", function(event) {
+    event.preventDefault()
+
     const run = inputRun.value
     const nombre = inputNombre.value
     const apellidos = inputApellidos.value
