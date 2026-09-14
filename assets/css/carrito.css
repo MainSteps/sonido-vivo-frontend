@@ -1,6 +1,6 @@
 .carrito-hero { padding-bottom: 1rem; }
 .carrito-contenido { padding-top: 1.5rem; }
-.carrito-layout, .carrito-lista { display: grid; gap: 1.25rem; }
+.carrito-layout, .carrito-lista { display: grid; min-width: 0; gap: 1.25rem; }
 .carrito-item { display: grid; gap: 1rem; align-items: center; padding: 1rem; border: 1px solid #34323f; border-radius: 1rem; background: var(--color-superficie); }
 .carrito-item img { width: 100%; max-height: 180px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: .7rem; }
 .carrito-item h2 { margin-bottom: .25rem; font-size: 1.25rem; }
@@ -18,8 +18,18 @@
 .resumen-carrito .button.secondary, .carrito-item .button.secondary { border: 1px solid #514d5d; }
 .carrito-item .eliminar-producto { cursor: pointer; }
 @media (min-width: 700px) {
-  .carrito-item { grid-template-columns: 130px minmax(180px, 1fr) auto auto auto auto; }
-  .carrito-item img { height: 105px; }
+  .carrito-item {
+    grid-template-columns: 130px minmax(0, 1fr) auto auto;
+    grid-template-areas:
+      "imagen informacion subtotal subtotal"
+      "imagen cantidad actualizar eliminar";
+  }
+  .carrito-item img { grid-area: imagen; height: 100%; min-height: 105px; }
+  .carrito-item-info { grid-area: informacion; min-width: 0; }
+  .campo-cantidad { grid-area: cantidad; }
+  .actualizar-cantidad { grid-area: actualizar; }
+  .subtotal { grid-area: subtotal; justify-self: end; text-align: right; }
+  .eliminar-producto { grid-area: eliminar; }
 }
 @media (min-width: 1000px) {
   .carrito-layout { grid-template-columns: minmax(0, 1fr) 320px; align-items: start; }
