@@ -1,4 +1,6 @@
 import { PRODUCTOS } from "./contenido.js";
+import { agregarProducto } from "./carrito-store.js";
+import "./site.js";
 const formatoPrecio = new Intl.NumberFormat("es-CL", {
     style: "currency",
     currency: "CLP",
@@ -21,9 +23,19 @@ if (producto) {
         <p>${producto.descripcion}</p>
         <p>${formatoPrecio.format(producto.precio)}</p>
         <p>Stock disponible: ${producto.stock}</p>
+        <label class="selector-cantidad">Cantidad
+            <input id="cantidad-producto" type="number" min="1" max="${producto.stock}" value="1" inputmode="numeric">
+        </label>
+        <button id="agregar-producto" class="boton-secundario" type="button">Agregar al carrito</button>
         <a class="boton-principal" href="catalogo.html">Volver al catálogo</a>
     </article>
-`;
+    `;
+
+    document.querySelector("#agregar-producto").addEventListener("click", () => {
+        const cantidad = document.querySelector("#cantidad-producto").value;
+        const linea = agregarProducto(producto.id, cantidad);
+        document.querySelector("#estado-producto").textContent = `${producto.nombre} agregado. Cantidad en el carrito: ${linea.cantidad}.`;
+    });
 } else {
     detalleProducto.innerHTML = `
         <p>No se encontró el producto solicitado.</p>

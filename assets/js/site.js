@@ -12,19 +12,20 @@ export function iniciarSitio() {
 }
 
 export function actualizarContadorCarrito() {
-  let carrito = [];
+  let cantidad = 0;
   try {
-    const guardado = JSON.parse(localStorage.getItem("sonidoVivoCarrito") || "[]");
-    carrito = Array.isArray(guardado) ? guardado : [];
+    const carrito = JSON.parse(localStorage.getItem("sonidoVivoCarrito") || "[]");
+    cantidad = Array.isArray(carrito)
+      ? carrito.reduce((total, item) => total + (Number(item.cantidad) || 0), 0)
+      : 0;
   } catch {
     localStorage.removeItem("sonidoVivoCarrito");
   }
-
-  const cantidad = carrito.reduce((total, item) => total + (Number(item.cantidad) || 0), 0);
   document.querySelectorAll(".cart-count").forEach((contador) => { contador.textContent = cantidad; });
   document.querySelectorAll(".cart-link").forEach((enlace) => {
     enlace.setAttribute("aria-label", `Ver carrito, ${cantidad} ${cantidad === 1 ? "producto" : "productos"}`);
   });
 }
 
+window.addEventListener("carrito:actualizado", actualizarContadorCarrito);
 iniciarSitio();
