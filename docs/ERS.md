@@ -59,7 +59,7 @@ La Evaluación 1 no procesa pagos reales, no autentica contra un servidor y no u
 | RF-11 | El carrito permitirá cambiar cantidades, retirar productos, vaciar la selección y calcular subtotales y total. | ANEXO p. 14; reglas acordadas en #7 | #7 |
 | RF-12 | El carrito conservará y recuperará su estado mediante `localStorage`. | ANEXO p. 14 | #7 |
 | RF-13 | La vista administrativa incluirá un menú visible y acceso al mantenimiento acordado. | ANEXO p. 10-11 | #9, #11 |
-| RF-14 | El mantenedor de productos permitirá listar, crear y editar datos simulados aplicando sus reglas de validación. | ANEXO p. 11-15 | #9 |
+| RF-14 | El mantenedor de productos permitirá listar, crear, editar y eliminar datos simulados aplicando sus reglas de validación y solicitando una confirmación visible antes de eliminar. | ANEXO p. 11-15 | #9 |
 | RF-15 | El mantenedor de usuarios permitirá listar, crear o editar usuarios simulados y aplicar sus reglas de validación. | ANEXO p. 11-16 | #11 |
 | RF-16 | La navegación administrativa representará los roles Administrador, Vendedor y Cliente sin afirmar que existe seguridad de servidor. | ANEXO p. 10, 16 | #11, #13 |
 
@@ -110,9 +110,9 @@ La Evaluación 1 no procesa pagos reales, no autentica contra un servidor y no u
 | Estructura y navegación (#6) | HTML semántico; navegación acordada; CSS externo adaptable; consola sin errores. |
 | Carrito (#7) | Agregar desde catálogo o detalle; modificar y eliminar; totales correctos; persistencia local. |
 | Catálogo y detalle (#8) | Datos desde JavaScript; listado y detalle navegables; contenido consistente; caso de ID inexistente. |
-| Mantenedor de productos (#9) | Listar, crear y editar datos simulados; validar reglas de producto; informar resultados. |
+| Mantenedor de productos (#9) | Listar, crear, editar y eliminar datos simulados; validar reglas de producto; solicitar confirmación visible antes de eliminar; informar resultados. |
 | Registro, acceso y contacto (#10) | Formularios completos, etiquetados y conectados a su navegación. |
-| Validaciones y usuarios (#11) | Mensajes personalizados; validación en tiempo real; regiones/comunas y reglas de usuario. |
+| Validaciones y usuarios (#11) | Mensajes personalizados; bloquear envíos inválidos; validar al intentar enviar o durante la interacción, según la implementación; regiones/comunas y reglas de usuario. |
 | Contenido simulado (#12) | Nombres, precios y categorías consistentes; imágenes permitidas; sin datos reales; ortografía revisada. |
 | Integración y calidad (#13-#16) | Navegación integrada; flujos y casos límite probados; resoluciones comprobadas; hallazgos corregidos. |
 
