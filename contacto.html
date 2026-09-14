@@ -1,47 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Contacto - Sonido Vivo</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <header>
-            <h1>Sonido Vivo</h1>
-            <p>Tienda de instrumentos y equipos musicales</p>
-        </header>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Sonido Vivo</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/formularios.css">
+</head>
+<body>
+    <header class="site-header">
+        <a
+            class="brand"
+            href="index.html"
+            aria-label="Sonido Vivo, página de inicio"
+        >
+            <span aria-hidden="true">♪</span> Sonido Vivo
+        </a>
 
-        <nav>
-            <a href="registro.html">Registro</a> |
-            <a href="inicio-sesion.html">Iniciar sesión</a> |
-            <a href="contacto.html">Contacto</a>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="main-menu"
+        >
+            Menú
+        </button>
+
+        <nav
+            id="main-menu"
+            class="main-nav"
+            aria-label="Navegación principal"
+        >
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blog.html">Blog</a>
+            <a aria-current="page" href="contacto.html">Contacto</a>
         </nav>
 
-        <main>
-            <section>
-                <h2>Contacto</h2>
-                <p>Escríbenos si tienes una consulta sobre instrumentos o equipos musicales.</p>
-                <form>
-                    <div>
-                        <label for="input-nombre-contacto">Nombre</label><br>
-                        <input id="input-nombre-contacto" type="text" placeholder="Ingrese su nombre" />
-                    </div>
-                    <div>
-                        <label for="input-email-contacto">Correo electrónico (opcional)</label><br>
-                        <input id="input-email-contacto" type="email" placeholder="Ingrese su correo electrónico" />
-                    </div>
-                    <div>
-                        <label for="input-comentario">Comentario</label><br>
-                        <textarea id="input-comentario" rows="5" placeholder="Escriba su consulta sobre Sonido Vivo"></textarea>
-                    </div>
-                    <button id="btn-contacto" type="button">Enviar consulta</button>
-                </form>
-            </section>
-        </main>
+        <a
+            class="cart-link"
+            href="carrito.html"
+            aria-label="Ver carrito, 0 productos"
+        >
+            Carrito <span class="cart-count">0</span>
+        </a>
+    </header>
 
-        <footer>
-            <p>Diego, Matías y Michel - 2026</p>
-        </footer>
-        <script src="assets/js/contacto.js"></script>
-    </body>
+    <main>
+        <section class="page-section">
+            <p class="eyebrow">Estamos para ayudarte</p>
+            <h1>Contacto</h1>
+            <p>
+                Escríbenos si tienes una consulta sobre instrumentos
+                o equipos musicales.
+            </p>
+
+            <form class="formulario-simulacion">
+                <div>
+                    <label for="input-nombre-contacto">Nombre</label>
+                    <input
+                        id="input-nombre-contacto"
+                        type="text"
+                        maxlength="100"
+                        placeholder="Ingrese su nombre"
+                    >
+                    <p id="mensaje-nombre-contacto"></p>
+                </div>
+
+                <div>
+                    <label for="input-email-contacto">
+                        Correo electrónico (opcional)
+                    </label>
+                    <input
+                        id="input-email-contacto"
+                        type="email"
+                        maxlength="100"
+                        placeholder="Ingrese su correo electrónico"
+                    >
+                    <p id="mensaje-email-contacto"></p>
+                </div>
+
+                <div>
+                    <label for="input-comentario">Comentario</label>
+                    <textarea
+                        id="input-comentario"
+                        maxlength="500"
+                        rows="5"
+                        placeholder="Escriba su consulta sobre Sonido Vivo"
+                    ></textarea>
+                    <p id="mensaje-comentario"></p>
+                </div>
+
+                <button id="btn-contacto" type="submit">
+
+                    Enviar consulta
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="index.html">
+            <span aria-hidden="true">♪</span> Sonido Vivo
+        </a>
+        <p>Proyecto académico con contenido y datos simulados.</p>
+        <nav aria-label="Enlaces del pie">
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </footer>
+
+    <script type="module" src="assets/js/site.js"></script>
+    <script src="assets/js/contacto.js"></script>
+</body>
 </html>

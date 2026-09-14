@@ -187,3 +187,15 @@ p {
     background: #0B0B10;
     font: inherit;
 }
+
+.catalogo-main > section > h1 {
+    margin-bottom: 1rem;
+}
+
+.detalle-producto .boton-secundario {
+    margin: 1rem 0.5rem 1rem 1rem;
+}
+
+.detalle-producto .boton-principal {
+    margin: 1rem 1rem 1rem 0.5rem;
+}

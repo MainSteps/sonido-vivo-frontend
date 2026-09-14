@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver usuario | Sonido Vivo Admin</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/formularios.css">
+</head>
+<body>
+    <header class="admin-header">
+        <a href="../index.html">♪ Sonido Vivo Admin</a>
+
+        <nav class="admin-nav" aria-label="Navegación administrativa">
+            <a href="productos.html">Productos</a>
+            <a aria-current="page" href="usuarios.html">Usuarios</a>
+            <a href="../index.html">Ver tienda pública</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <p class="eyebrow">Administración simulada</p>
+            <h1>Ver usuario</h1>
+
+            <div class="formulario-simulacion">
+                <div>
+                    <label for="seleccionar-usuario">
+                        Usuario simulado
+                    </label>
+                    <select id="seleccionar-usuario">
+                        <option value="">Seleccione un usuario</option>
+                    </select>
+                </div>
+
+                <div id="detalle-usuario">
+                    <p>
+                        <strong>RUN:</strong>
+                        <span id="detalle-run"></span>
+                    </p>
+                    <p>
+                        <strong>Nombre:</strong>
+                        <span id="detalle-nombre"></span>
+                    </p>
+                    <p>
+                        <strong>Correo:</strong>
+                        <span id="detalle-email"></span>
+                    </p>
+                    <p>
+                        <strong>Rol:</strong>
+                        <span id="detalle-rol"></span>
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                <a href="usuarios.html">← Volver al listado de usuarios</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="../index.html">
+            <span aria-hidden="true">♪</span> Sonido Vivo
+        </a>
+        <p>Proyecto académico con contenido y datos simulados.</p>
+        <nav aria-label="Enlaces del pie">
+            <a href="productos.html">Productos</a>
+            <a href="usuarios.html">Usuarios</a>
+        </nav>
+    </footer>
+
+    <script src="../assets/js/data/usuarios.js"></script>
+    <script src="../assets/js/admin-usuario-detalle.js"></script>
+</body>
+</html>

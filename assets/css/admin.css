@@ -1,0 +1,27 @@
+.admin-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem clamp(1rem, 5vw, 4rem);
+    border-bottom: 1px solid #34323f;
+    background: #17171f;
+}
+
+.admin-header a {
+    color: #f7f5fa;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.admin-header a:hover,
+.admin-header a[aria-current="page"] {
+    color: #f04483;
+}
+
+.admin-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
