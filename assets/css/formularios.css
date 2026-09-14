@@ -35,11 +35,12 @@
     resize: vertical;
 }
 
-.formulario-simulacion p {
+.formulario-simulacion p[id^="mensaje-"] {
     min-height: 1.5rem;
     margin: 0;
     color: var(--color-error);
 }
+
 
 .formulario-simulacion button {
     width: fit-content;
