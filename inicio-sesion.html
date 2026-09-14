@@ -15,7 +15,8 @@
         <nav>
             <a href="registro.html">Registro</a> |
             <a href="inicio-sesion.html">Iniciar sesión</a> |
-            <a href="contacto.html">Contacto</a>
+            <a href="contacto.html">Contacto</a> |
+            <a href="admin/usuarios.html">Administrar usuarios</a>
         </nav>
 
         <!-- Contenido principal de la página -->
@@ -26,11 +27,13 @@
                 <form>
                     <div>
                         <label for="input-email-login">Correo electrónico</label><br>
-                        <input id="input-email-login" type="email" placeholder="Ingrese su correo electrónico" />
+                        <input id="input-email-login" type="email" maxlength="100" placeholder="Ingrese su correo electrónico" />
+                        <p id="mensaje-email-login"></p>
                     </div>
                     <div>
                         <label for="input-password-login">Contraseña</label><br>
-                        <input id="input-password-login" type="password" placeholder="Ingrese una contraseña de prueba" />
+                        <input id="input-password-login" type="password" minlength="4" maxlength="10" placeholder="Ingrese una contraseña de prueba" />
+                        <p id="mensaje-password-login"></p>
                     </div>
                     <button id="btn-inicio-sesion" type="button">Iniciar sesión</button>
                 </form>

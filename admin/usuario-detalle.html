@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ver usuario - Sonido Vivo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>Sonido Vivo</h1>
+            <p>Administración de usuarios simulados</p>
+        </header>
+
+        <nav>
+            <a href="usuarios.html">Volver al listado</a> |
+            <a href="usuario-crear.html">Crear usuario</a>
+        </nav>
+
+        <main>
+            <section>
+                <h2>Ver usuario</h2>
+                <label for="seleccionar-usuario">Usuario simulado</label><br>
+                <select id="seleccionar-usuario">
+                    <option value="">Seleccione un usuario</option>
+                </select>
+
+                <div id="detalle-usuario">
+                    <p><strong>RUN:</strong> <span id="detalle-run"></span></p>
+                    <p><strong>Nombre:</strong> <span id="detalle-nombre"></span></p>
+                    <p><strong>Correo:</strong> <span id="detalle-email"></span></p>
+                    <p><strong>Rol:</strong> <span id="detalle-rol"></span></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Diego, Matías y Michel - 2026</p>
+        </footer>
+        <script src="../assets/js/data/usuarios.js"></script>
+        <script src="../assets/js/admin-usuario-detalle.js"></script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Usuarios - Sonido Vivo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/css/usuarios.css">
+    </head>
+    <body>
+        <header>
+            <h1>Sonido Vivo</h1>
+            <p>Administración de usuarios simulados</p>
+        </header>
+
+        <nav>
+            <a href="../registro.html">Registro</a> |
+            <a href="../inicio-sesion.html">Iniciar sesión</a> |
+            <a href="../contacto.html">Contacto</a>
+        </nav>
+
+        <main>
+            <section>
+                <h2>Usuarios</h2>
+                <p>Estos datos son ficticios y se usan solamente para la demostración académica.</p>
+                <p>
+                    <a href="usuario-crear.html">Crear usuario simulado</a> |
+                    <a href="usuario-detalle.html">Ver usuario</a> |
+                    <a href="usuario-editar.html">Editar usuario</a>
+                </p>
+                <div class="tabla-usuarios">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>RUN</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Rol</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-usuarios"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Diego, Matías y Michel - 2026</p>
+        </footer>
+        <script src="../assets/js/data/usuarios.js"></script>
+        <script src="../assets/js/admin-usuarios.js"></script>
+    </body>
+</html>

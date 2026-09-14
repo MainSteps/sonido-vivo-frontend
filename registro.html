@@ -15,7 +15,8 @@
         <nav>
             <a href="registro.html">Registro</a> |
             <a href="inicio-sesion.html">Iniciar sesión</a> |
-            <a href="contacto.html">Contacto</a>
+            <a href="contacto.html">Contacto</a> |
+            <a href="admin/usuarios.html">Administrar usuarios</a>
         </nav>
 
         <!-- Contenido principal de la página -->
@@ -27,31 +28,51 @@
                 <form>
                     <div>
                         <label for="input-run">RUN (sin puntos ni guion)</label><br>
-                        <input id="input-run" type="text" placeholder="Ingrese un RUN de prueba" />
+                        <input id="input-run" type="text" minlength="7" maxlength="9" placeholder="Ingrese un RUN de prueba" />
+                        <p id="mensaje-run"></p>
                     </div>
                     <div>
                         <label for="input-nombre">Nombre</label><br>
-                        <input id="input-nombre" type="text" />
+                        <input id="input-nombre" type="text" maxlength="50" />
+                        <p id="mensaje-nombre"></p>
                     </div>
                     <div>
                         <label for="input-apellidos">Apellidos</label><br>
-                        <input id="input-apellidos" type="text" />
+                        <input id="input-apellidos" type="text" maxlength="100" />
+                        <p id="mensaje-apellidos"></p>
                     </div>
                     <div>
                         <label for="input-email">Correo electrónico</label><br>
-                        <input id="input-email" type="email" placeholder="Ingrese su correo electrónico" />
+                        <input id="input-email" type="email" maxlength="100" placeholder="Ingrese su correo electrónico" />
+                        <p id="mensaje-email"></p>
                     </div>
                     <div>
                         <label for="input-password">Contraseña</label><br>
-                        <input id="input-password" type="password" placeholder="Ingrese una contraseña de prueba" />
+                        <input id="input-password" type="password" minlength="4" maxlength="10" placeholder="Ingrese una contraseña de prueba" />
+                        <p id="mensaje-password"></p>
                     </div>
                     <div>
                         <label for="input-fecha-nacimiento">Fecha de nacimiento (opcional)</label><br>
                         <input id="input-fecha-nacimiento" type="date" />
                     </div>
                     <div>
+                        <label for="input-region">Región</label><br>
+                        <select id="input-region">
+                            <option value="">Seleccione una región</option>
+                        </select>
+                        <p id="mensaje-region"></p>
+                    </div>
+                    <div>
+                        <label for="input-comuna">Comuna</label><br>
+                        <select id="input-comuna">
+                            <option value="">Seleccione primero una región</option>
+                        </select>
+                        <p id="mensaje-comuna"></p>
+                    </div>
+                    <div>
                         <label for="input-direccion">Dirección</label><br>
-                        <input id="input-direccion" type="text" placeholder="Ingrese una dirección de prueba" />
+                        <input id="input-direccion" type="text" maxlength="300" placeholder="Ingrese una dirección de prueba" />
+                        <p id="mensaje-direccion"></p>
                     </div>
                     <!-- Botón conectado al archivo JavaScript de registro -->
                     <button id="btn-registro" type="button">Registrarse</button>
@@ -63,6 +84,7 @@
         <footer>
             <p>Diego, Matías y Michel - 2026</p>
         </footer>
+        <script src="assets/js/data/regiones-comunas.js"></script>
         <script src="assets/js/registro.js"></script>
     </body>
 </html>

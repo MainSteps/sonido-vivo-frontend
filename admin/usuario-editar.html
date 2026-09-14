@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Editar usuario - Sonido Vivo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>Sonido Vivo</h1>
+            <p>Administración de usuarios simulados</p>
+        </header>
+
+        <nav>
+            <a href="usuarios.html">Volver al listado</a> |
+            <a href="usuario-detalle.html">Ver usuario</a>
+        </nav>
+
+        <main>
+            <section>
+                <h2>Editar usuario</h2>
+                <p>Los cambios son parte de una demostración y no modifican datos reales.</p>
+                <form>
+                    <div>
+                        <label for="editar-seleccion">Usuario simulado</label><br>
+                        <select id="editar-seleccion">
+                            <option value="">Seleccione un usuario</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="editar-run">RUN</label><br>
+                        <input id="editar-run" type="text" readonly />
+                    </div>
+                    <div>
+                        <label for="editar-nombre">Nombre</label><br>
+                        <input id="editar-nombre" type="text" maxlength="50" />
+                    </div>
+                    <div>
+                        <label for="editar-apellidos">Apellidos</label><br>
+                        <input id="editar-apellidos" type="text" maxlength="100" />
+                    </div>
+                    <div>
+                        <label for="editar-email">Correo electrónico</label><br>
+                        <input id="editar-email" type="email" maxlength="100" />
+                    </div>
+                    <div>
+                        <label for="editar-rol">Rol</label><br>
+                        <select id="editar-rol">
+                            <option value="Administrador">Administrador</option>
+                            <option value="Vendedor">Vendedor</option>
+                            <option value="Cliente">Cliente</option>
+                        </select>
+                    </div>
+                    <button id="btn-editar-usuario" type="button">Guardar cambio simulado</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>Diego, Matías y Michel - 2026</p>
+        </footer>
+        <script src="../assets/js/data/usuarios.js"></script>
+        <script src="../assets/js/admin-usuario-editar.js"></script>
+    </body>
+</html>

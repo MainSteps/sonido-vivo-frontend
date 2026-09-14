@@ -14,7 +14,8 @@
         <nav>
             <a href="registro.html">Registro</a> |
             <a href="inicio-sesion.html">Iniciar sesión</a> |
-            <a href="contacto.html">Contacto</a>
+            <a href="contacto.html">Contacto</a> |
+            <a href="admin/usuarios.html">Administrar usuarios</a>
         </nav>
 
         <main>
@@ -24,15 +25,18 @@
                 <form>
                     <div>
                         <label for="input-nombre-contacto">Nombre</label><br>
-                        <input id="input-nombre-contacto" type="text" placeholder="Ingrese su nombre" />
+                        <input id="input-nombre-contacto" type="text" maxlength="100" placeholder="Ingrese su nombre" />
+                        <p id="mensaje-nombre-contacto"></p>
                     </div>
                     <div>
                         <label for="input-email-contacto">Correo electrónico (opcional)</label><br>
-                        <input id="input-email-contacto" type="email" placeholder="Ingrese su correo electrónico" />
+                        <input id="input-email-contacto" type="email" maxlength="100" placeholder="Ingrese su correo electrónico" />
+                        <p id="mensaje-email-contacto"></p>
                     </div>
                     <div>
                         <label for="input-comentario">Comentario</label><br>
-                        <textarea id="input-comentario" rows="5" placeholder="Escriba su consulta sobre Sonido Vivo"></textarea>
+                        <textarea id="input-comentario" maxlength="500" rows="5" placeholder="Escriba su consulta sobre Sonido Vivo"></textarea>
+                        <p id="mensaje-comentario"></p>
                     </div>
                     <button id="btn-contacto" type="button">Enviar consulta</button>
                 </form>
