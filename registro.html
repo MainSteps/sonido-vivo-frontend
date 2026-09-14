@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Sonido Vivo</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/formularios.css">
+</head>
+<body>
+    <header class="site-header">
+        <a
+            class="brand"
+            href="index.html"
+            aria-label="Sonido Vivo, página de inicio"
+        >
+            <span aria-hidden="true">♪</span> Sonido Vivo
+        </a>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="main-menu"
+        >
+            Menú
+        </button>
+
+        <nav
+            id="main-menu"
+            class="main-nav"
+            aria-label="Navegación principal"
+        >
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blog.html">Blog</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <a
+            class="cart-link"
+            href="carrito.html"
+            aria-label="Ver carrito, 0 productos"
+        >
+            Carrito <span class="cart-count">0</span>
+        </a>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <p class="eyebrow">Cuenta de demostración</p>
+            <h1>Registro de usuario</h1>
+            <p>Completa el formulario únicamente con datos de prueba.</p>
+
+            <form class="formulario-simulacion">
+                <div>
+                    <label for="input-run">RUN (sin puntos ni guion)</label>
+                    <input
+                        id="input-run"
+                        type="text"
+                        minlength="7"
+                        maxlength="9"
+                        placeholder="Ingrese un RUN de prueba"
+                    >
+                    <p id="mensaje-run"></p>
+                </div>
+
+                <div>
+                    <label for="input-nombre">Nombre</label>
+                    <input
+                        id="input-nombre"
+                        type="text"
+                        maxlength="50"
+                    >
+                    <p id="mensaje-nombre"></p>
+                </div>
+
+                <div>
+                    <label for="input-apellidos">Apellidos</label>
+                    <input
+                        id="input-apellidos"
+                        type="text"
+                        maxlength="100"
+                    >
+                    <p id="mensaje-apellidos"></p>
+                </div>
+
+                <div>
+                    <label for="input-email">Correo electrónico</label>
+                    <input
+                        id="input-email"
+                        type="email"
+                        maxlength="100"
+                        placeholder="Ingrese su correo electrónico"
+                    >
+                    <p id="mensaje-email"></p>
+                </div>
+
+                <div>
+                    <label for="input-password">Contraseña</label>
+                    <input
+                        id="input-password"
+                        type="password"
+                        minlength="4"
+                        maxlength="10"
+                        placeholder="Ingrese una contraseña de prueba"
+                    >
+                    <p id="mensaje-password"></p>
+                </div>
+
+                <div>
+                    <label for="input-fecha-nacimiento">
+                        Fecha de nacimiento (opcional)
+                    </label>
+                    <input id="input-fecha-nacimiento" type="date">
+                </div>
+
+                <div>
+                    <label for="input-region">Región</label>
+                    <select id="input-region">
+                        <option value="">Seleccione una región</option>
+                    </select>
+                    <p id="mensaje-region"></p>
+                </div>
+
+                <div>
+                    <label for="input-comuna">Comuna</label>
+                    <select id="input-comuna">
+                        <option value="">Seleccione primero una región</option>
+                    </select>
+                    <p id="mensaje-comuna"></p>
+                </div>
+
+                <div>
+                    <label for="input-direccion">Dirección</label>
+                    <input
+                        id="input-direccion"
+                        type="text"
+                        maxlength="300"
+                        placeholder="Ingrese una dirección de prueba"
+                    >
+                    <p id="mensaje-direccion"></p>
+                </div>
+
+                <button id="btn-registro" type="submit">
+                    Registrarse
+                </button>
+            </form>
+
+            <p>
+                ¿Ya tienes una cuenta de demostración?
+                <a href="inicio-sesion.html">Inicia sesión</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="index.html">
+            <span aria-hidden="true">♪</span> Sonido Vivo
+        </a>
+        <p>Proyecto académico con contenido y datos simulados.</p>
+        <nav aria-label="Enlaces del pie">
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </footer>
+
+    <script type="module" src="assets/js/site.js"></script>
+    <script src="assets/js/data/regiones-comunas.js"></script>
+    <script src="assets/js/registro.js"></script>
+</body>
+</html>

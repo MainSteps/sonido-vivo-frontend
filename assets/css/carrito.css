@@ -1,0 +1,37 @@
+.carrito-hero { padding-bottom: 1rem; }
+.carrito-contenido { padding-top: 1.5rem; }
+.carrito-layout, .carrito-lista { display: grid; min-width: 0; gap: 1.25rem; }
+.carrito-item { display: grid; gap: 1rem; align-items: center; padding: 1rem; border: 1px solid #34323f; border-radius: 1rem; background: var(--color-superficie); }
+.carrito-item img { width: 100%; max-height: 180px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: .7rem; }
+.carrito-item h2 { margin-bottom: .25rem; font-size: 1.25rem; }
+.carrito-item p { margin-bottom: 0; }
+.campo-cantidad { display: grid; gap: .35rem; color: var(--color-texto-suave); font-weight: 700; }
+.campo-cantidad input { width: 5.5rem; min-height: 44px; padding: .5rem; border: 1px solid #514d5d; border-radius: .5rem; color: var(--color-texto); background: var(--color-fondo); font: inherit; }
+.subtotal { display: grid; gap: .15rem; font-size: 1.2rem; font-weight: 800; }
+.subtotal span { color: var(--color-texto-suave); font-size: .8rem; font-weight: 600; }
+.resumen-carrito, .carrito-vacio { padding: 1.5rem; border: 1px solid #34323f; border-radius: 1rem; background: var(--color-superficie); }
+.resumen-carrito h2 { font-size: 1.45rem; }
+.resumen-carrito > p:not(.eyebrow, .nota-simulacion) { display: flex; justify-content: space-between; gap: 1rem; }
+.resumen-total { padding-top: 1rem; border-top: 1px solid #34323f; font-size: 1.2rem; }
+.nota-simulacion, .carrito-vacio p { color: var(--color-texto-suave); }
+.resumen-carrito .button { width: 100%; margin-top: .75rem; border: 0; font: inherit; cursor: pointer; }
+.resumen-carrito .button.secondary, .carrito-item .button.secondary { border: 1px solid #514d5d; }
+.carrito-item .eliminar-producto { cursor: pointer; }
+@media (min-width: 700px) {
+  .carrito-item {
+    grid-template-columns: 130px minmax(0, 1fr) auto auto;
+    grid-template-areas:
+      "imagen informacion subtotal subtotal"
+      "imagen cantidad actualizar eliminar";
+  }
+  .carrito-item img { grid-area: imagen; height: 100%; min-height: 105px; }
+  .carrito-item-info { grid-area: informacion; min-width: 0; }
+  .campo-cantidad { grid-area: cantidad; }
+  .actualizar-cantidad { grid-area: actualizar; }
+  .subtotal { grid-area: subtotal; justify-self: end; text-align: right; }
+  .eliminar-producto { grid-area: eliminar; }
+}
+@media (min-width: 1000px) {
+  .carrito-layout { grid-template-columns: minmax(0, 1fr) 320px; align-items: start; }
+  .resumen-carrito { position: sticky; top: 1rem; }
+}

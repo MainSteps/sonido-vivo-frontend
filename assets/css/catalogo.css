@@ -5,7 +5,8 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
-main {
+.catalogo-main,
+.mantenedor-main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 3rem 1rem;
@@ -117,4 +118,84 @@ p {
     #lista-productos {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+}
+
+.tabla-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: 1rem;
+    border: 1px solid #24232E;
+    border-radius: 8px;
+}
+
+.tabla-responsive table {
+    width: max-content;
+    min-width: 700px;
+    border-collapse: collapse;
+}
+
+.tabla-responsive th,
+.tabla-responsive td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #24232E;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.tabla-responsive th {
+    color: #F04483;
+}
+
+.tabla-responsive td button {
+    margin-right: 0.5rem;
+}
+
+.boton-secundario {
+    display: inline-block;
+    min-height: 44px;
+    margin: 1rem 1rem 1rem 0;
+    padding: 0.75rem 1rem;
+    border: 1px solid #514D5D;
+    border-radius: 8px;
+    color: #F7F5FA;
+    background: transparent;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.boton-secundario:hover {
+    background-color: #24232E;
+}
+
+.selector-cantidad {
+    display: grid;
+    gap: .35rem;
+    margin: 1rem;
+    color: #BDB8C7;
+    font-weight: 700;
+}
+
+.selector-cantidad input {
+    width: 6rem;
+    min-height: 44px;
+    padding: .5rem;
+    border: 1px solid #514D5D;
+    border-radius: 8px;
+    color: #F7F5FA;
+    background: #0B0B10;
+    font: inherit;
+}
+
+.catalogo-main > section > h1 {
+    margin-bottom: 1rem;
+}
+
+.detalle-producto .boton-secundario {
+    margin: 1rem 0.5rem 1rem 1rem;
+}
+
+.detalle-producto .boton-principal {
+    margin: 1rem 1rem 1rem 0.5rem;
 }
