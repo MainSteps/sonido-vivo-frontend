@@ -8,7 +8,7 @@ const articulos = document.querySelector("#featured-posts");
 productos?.replaceChildren(...PRODUCTOS.slice(0, 4).map((producto) => {
   const tarjeta = document.createElement("article");
   tarjeta.className = "product-card";
-  tarjeta.innerHTML = `<img src="${producto.imagen}" alt=""><div><p class="eyebrow">${producto.categoria}</p><h3>${producto.nombre}</h3><p class="price">${formatearPrecio(producto.precio)}</p><a href="productos.html">Ver en Productos</a></div>`;
+  tarjeta.innerHTML = `<img src="${producto.imagen}" alt=""><div><p class="eyebrow">${producto.categoria}</p><h3>${producto.nombre}</h3><p class="price">${formatearPrecio(producto.precio)}</p><a href="producto.html?id=${producto.id}">Ver producto</a></div>`;
   return tarjeta;
 }));
 
