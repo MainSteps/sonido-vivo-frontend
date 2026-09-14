@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonido Vivo | Catálogo</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/catalogo.css">
 </head>
 <body>
-    <main>
+    <header class="site-header"><a class="brand" href="index.html" aria-label="Sonido Vivo, página de inicio"><span aria-hidden="true">♪</span> Sonido Vivo</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menú</button><nav id="main-menu" class="main-nav" aria-label="Navegación principal"><a href="index.html">Inicio</a><a aria-current="page" href="catalogo.html">Productos</a><a href="nosotros.html">Nosotros</a><a href="blog.html">Blog</a><a href="contacto.html">Contacto</a></nav><a class="cart-link" href="carrito.html" aria-label="Ver carrito, 0 productos">Carrito <span class="cart-count">0</span></a></header>
+    <main class="catalogo-main">
         <section>
             <h1>Catálogo de productos</h1>
             <p>Explora instrumentos y accesorios disponibles en Sonido Vivo.</p>
             <div id="lista-productos"></div>
+            <div id="estado-catalogo" class="sr-only" role="status" aria-live="polite"></div>
 
         </section>
     </main>
+    <footer class="site-footer"><a class="brand" href="index.html"><span aria-hidden="true">♪</span> Sonido Vivo</a><p>Proyecto académico con contenido y datos simulados.</p><nav aria-label="Enlaces del pie"><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a></nav></footer>
     <script type="module" src="assets/js/catalogo.js"></script>
 </body>
 </html>
