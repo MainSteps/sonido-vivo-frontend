@@ -1,65 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Editar usuario - Sonido Vivo</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <header>
-            <h1>Sonido Vivo</h1>
-            <p>Administración de usuarios simulados</p>
-        </header>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar usuario | Sonido Vivo Admin</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/formularios.css">
+</head>
+<body>
+    <header class="admin-header">
+        <a href="../index.html">♪ Sonido Vivo Admin</a>
 
-        <nav>
-            <a href="usuarios.html">Volver al listado</a> |
-            <a href="usuario-detalle.html">Ver usuario</a>
+        <nav class="admin-nav" aria-label="Navegación administrativa">
+            <a href="productos.html">Productos</a>
+            <a aria-current="page" href="usuarios.html">Usuarios</a>
+            <a href="../index.html">Ver tienda pública</a>
         </nav>
+    </header>
 
-        <main>
-            <section>
-                <h2>Editar usuario</h2>
-                <p>Los cambios son parte de una demostración y no modifican datos reales.</p>
-                <form>
-                    <div>
-                        <label for="editar-seleccion">Usuario simulado</label><br>
-                        <select id="editar-seleccion">
-                            <option value="">Seleccione un usuario</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="editar-run">RUN</label><br>
-                        <input id="editar-run" type="text" readonly />
-                    </div>
-                    <div>
-                        <label for="editar-nombre">Nombre</label><br>
-                        <input id="editar-nombre" type="text" maxlength="50" />
-                    </div>
-                    <div>
-                        <label for="editar-apellidos">Apellidos</label><br>
-                        <input id="editar-apellidos" type="text" maxlength="100" />
-                    </div>
-                    <div>
-                        <label for="editar-email">Correo electrónico</label><br>
-                        <input id="editar-email" type="email" maxlength="100" />
-                    </div>
-                    <div>
-                        <label for="editar-rol">Rol</label><br>
-                        <select id="editar-rol">
-                            <option value="Administrador">Administrador</option>
-                            <option value="Vendedor">Vendedor</option>
-                            <option value="Cliente">Cliente</option>
-                        </select>
-                    </div>
-                    <button id="btn-editar-usuario" type="button">Guardar cambio simulado</button>
-                </form>
-            </section>
-        </main>
+    <main>
+        <section class="page-section">
+            <p class="eyebrow">Administración simulada</p>
+            <h1>Editar usuario</h1>
+            <p>
+                Los cambios son parte de una demostración y no modifican
+                datos reales.
+            </p>
 
-        <footer>
-            <p>Diego, Matías y Michel - 2026</p>
-        </footer>
-        <script src="../assets/js/data/usuarios.js"></script>
-        <script src="../assets/js/admin-usuario-editar.js"></script>
-    </body>
+            <form class="formulario-simulacion">
+                <div>
+                    <label for="editar-seleccion">Usuario simulado</label>
+                    <select id="editar-seleccion">
+                        <option value="">Seleccione un usuario</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="editar-run">RUN</label>
+                    <input id="editar-run" type="text" readonly>
+                </div>
+
+                <div>
+                    <label for="editar-nombre">Nombre</label>
+                    <input
+                        id="editar-nombre"
+                        type="text"
+                        maxlength="50"
+                    >
+                </div>
+
+                <div>
+                    <label for="editar-apellidos">Apellidos</label>
+                    <input
+                        id="editar-apellidos"
+                        type="text"
+                        maxlength="100"
+                    >
+                </div>
+
+                <div>
+                    <label for="editar-email">Correo electrónico</label>
+                    <input
+                        id="editar-email"
+                        type="email"
+                        maxlength="100"
+                    >
+                </div>
+
+                <div>
+                    <label for="editar-rol">Rol</label>
+                    <select id="editar-rol">
+                        <option value="Administrador">Administrador</option>
+                        <option value="Vendedor">Vendedor</option>
+                        <option value="Cliente">Cliente</option>
+                    </select>
+                </div>
+
+                <button id="btn-editar-usuario" type="button">
+                    Guardar cambio simulado
+                </button>
+            </form>
+
+            <p>
+                <a href="usuarios.html">← Volver al listado de usuarios</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="../index.html">
+            <span aria-hidden="true">♪</span> Sonido Vivo
+        </a>
+        <p>Proyecto académico con contenido y datos simulados.</p>
+        <nav aria-label="Enlaces del pie">
+            <a href="productos.html">Productos</a>
+            <a href="usuarios.html">Usuarios</a>
+        </nav>
+    </footer>
+
+    <script src="../assets/js/data/usuarios.js"></script>
+    <script src="../assets/js/admin-usuario-editar.js"></script>
+</body>
 </html>

@@ -1,5 +1,9 @@
 // Identificar el botón de contacto, como en el ejemplo de la Clase 6.
 const botonContacto = document.getElementById("btn-contacto")
+const formularioContacto = document.querySelector(
+    ".formulario-simulacion"
+)
+
 
 // Identificar el campo de nombre.
 const inputNombreContacto = document.getElementById("input-nombre-contacto")
@@ -20,7 +24,11 @@ const inputComentario = document.getElementById("input-comentario")
 const mensajeComentario = document.getElementById("mensaje-comentario")
 
 // Comprobar los campos cuando se hace clic en el botón.
-botonContacto.addEventListener("click", function() {
+formularioContacto.addEventListener(
+    "submit",
+    function(event) {
+        event.preventDefault()
+
     const nombre = inputNombreContacto.value
     const email = inputEmailContacto.value
     const comentario = inputComentario.value

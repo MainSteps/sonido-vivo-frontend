@@ -1,80 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Crear usuario - Sonido Vivo</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <header>
-            <h1>Sonido Vivo</h1>
-            <p>Administración de usuarios simulados</p>
-        </header>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear usuario | Sonido Vivo Admin</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/formularios.css">
+</head>
+<body>
+    <header class="admin-header">
+        <a href="../index.html">♪ Sonido Vivo Admin</a>
 
-        <nav>
-            <a href="usuarios.html">Volver al listado</a> |
-            <a href="../registro.html">Registro público</a>
+        <nav class="admin-nav" aria-label="Navegación administrativa">
+            <a href="productos.html">Productos</a>
+            <a aria-current="page" href="usuarios.html">Usuarios</a>
+            <a href="../index.html">Ver tienda pública</a>
         </nav>
+    </header>
 
-        <main>
-            <section>
-                <h2>Crear usuario</h2>
-                <p>Complete el formulario solamente con datos de demostración.</p>
-                <form>
-                    <div>
-                        <label for="crear-run">RUN (sin puntos ni guion)</label><br>
-                        <input id="crear-run" type="text" minlength="7" maxlength="9" />
-                    </div>
-                    <div>
-                        <label for="crear-nombre">Nombre</label><br>
-                        <input id="crear-nombre" type="text" maxlength="50" />
-                    </div>
-                    <div>
-                        <label for="crear-apellidos">Apellidos</label><br>
-                        <input id="crear-apellidos" type="text" maxlength="100" />
-                    </div>
-                    <div>
-                        <label for="crear-email">Correo electrónico</label><br>
-                        <input id="crear-email" type="email" maxlength="100" />
-                    </div>
-                    <div>
-                        <label for="crear-password">Contraseña de demostración</label><br>
-                        <input id="crear-password" type="password" minlength="4" maxlength="10" />
-                    </div>
-                    <div>
-                        <label for="crear-rol">Rol</label><br>
-                        <select id="crear-rol">
-                            <option value="">Seleccione un rol</option>
-                            <option value="Administrador">Administrador</option>
-                            <option value="Vendedor">Vendedor</option>
-                            <option value="Cliente">Cliente</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="crear-region">Región</label><br>
-                        <select id="crear-region">
-                            <option value="">Seleccione una región</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="crear-comuna">Comuna</label><br>
-                        <select id="crear-comuna">
-                            <option value="">Seleccione primero una región</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="crear-direccion">Dirección</label><br>
-                        <input id="crear-direccion" type="text" maxlength="300" />
-                    </div>
-                    <button id="btn-crear-usuario" type="button">Crear usuario simulado</button>
-                </form>
-            </section>
-        </main>
+    <main>
+        <section class="page-section">
+            <p class="eyebrow">Administración simulada</p>
+            <h1>Crear usuario</h1>
+            <p>
+                Completa el formulario solamente con datos de demostración.
+            </p>
 
-        <footer>
-            <p>Diego, Matías y Michel - 2026</p>
-        </footer>
-        <script src="../assets/js/data/regiones-comunas.js"></script>
-        <script src="../assets/js/admin-usuario-crear.js"></script>
-    </body>
+            <form class="formulario-simulacion">
+                <div>
+                    <label for="crear-run">RUN (sin puntos ni guion)</label>
+                    <input
+                        id="crear-run"
+                        type="text"
+                        minlength="7"
+                        maxlength="9"
+                    >
+                </div>
+
+                <div>
+                    <label for="crear-nombre">Nombre</label>
+                    <input
+                        id="crear-nombre"
+                        type="text"
+                        maxlength="50"
+                    >
+                </div>
+
+                <div>
+                    <label for="crear-apellidos">Apellidos</label>
+                    <input
+                        id="crear-apellidos"
+                        type="text"
+                        maxlength="100"
+                    >
+                </div>
+
+                <div>
+                    <label for="crear-email">Correo electrónico</label>
+                    <input
+                        id="crear-email"
+                        type="email"
+                        maxlength="100"
+                    >
+                </div>
+
+                <div>
+                    <label for="crear-password">
+                        Contraseña de demostración
+                    </label>
+                    <input
+                        id="crear-password"
+                        type="password"
+                        minlength="4"
+                        maxlength="10"
+                    >
+                </div>
+
+                <div>
+                    <label for="crear-rol">Rol</label>
+                    <select id="crear-rol">
+                        <option value="">Seleccione un rol</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Vendedor">Vendedor</option>
+                        <option value="Cliente">Cliente</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="crear-region">Región</label>
+                    <select id="crear-region">
+                        <option value="">Seleccione una región</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="crear-comuna">Comuna</label>
+                    <select id="crear-comuna">
+                        <option value="">
+                            Seleccione primero una región
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="crear-direccion">Dirección</label>
+                    <input
+                        id="crear-direccion"
+                        type="text"
+                        maxlength="300"
+                    >
+                </div>
+
+                <button id="btn-crear-usuario" type="button">
+                    Crear usuario simulado
+                </button>
+            </form>
+
+            <p>
+                <a href="usuarios.html">← Volver al listado de usuarios</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="../index.html">
+            <span aria-hidden="true">♪</span> Sonido Vivo
+        </a>
+        <p>Proyecto académico con contenido y datos simulados.</p>
+        <nav aria-label="Enlaces del pie">
+            <a href="productos.html">Productos</a>
+            <a href="usuarios.html">Usuarios</a>
+        </nav>
+    </footer>
+
+    <script src="../assets/js/data/regiones-comunas.js"></script>
+    <script src="../assets/js/admin-usuario-crear.js"></script>
+</body>
 </html>

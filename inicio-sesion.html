@@ -1,49 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Iniciar sesión - Sonido Vivo</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <!-- Encabezado del sitio -->
-        <header>
-            <h1>Sonido Vivo</h1>
-            <p>Tienda de instrumentos y equipos musicales</p>
-        </header>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Sonido Vivo</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/formularios.css">
+</head>
+<body>
+    <header class="site-header">
+        <a
+            class="brand"
+            href="index.html"
+            aria-label="Sonido Vivo, página de inicio"
+        >
+            <span aria-hidden="true">♪</span> Sonido Vivo
+        </a>
 
-        <nav>
-            <a href="registro.html">Registro</a> |
-            <a href="inicio-sesion.html">Iniciar sesión</a> |
-            <a href="contacto.html">Contacto</a> |
-            <a href="admin/usuarios.html">Administrar usuarios</a>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="main-menu"
+        >
+            Menú
+        </button>
+
+        <nav
+            id="main-menu"
+            class="main-nav"
+            aria-label="Navegación principal"
+        >
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blog.html">Blog</a>
+            <a href="contacto.html">Contacto</a>
         </nav>
 
-        <!-- Contenido principal de la página -->
-        <main>
-            <section>
-                <h2>Iniciar sesión</h2>
-                <p>Ingresa con datos de prueba para acceder a la demostración.</p>
-                <form>
-                    <div>
-                        <label for="input-email-login">Correo electrónico</label><br>
-                        <input id="input-email-login" type="email" maxlength="100" placeholder="Ingrese su correo electrónico" />
-                        <p id="mensaje-email-login"></p>
-                    </div>
-                    <div>
-                        <label for="input-password-login">Contraseña</label><br>
-                        <input id="input-password-login" type="password" minlength="4" maxlength="10" placeholder="Ingrese una contraseña de prueba" />
-                        <p id="mensaje-password-login"></p>
-                    </div>
-                    <button id="btn-inicio-sesion" type="button">Iniciar sesión</button>
-                </form>
-            </section>
-        </main>
+        <a
+            class="cart-link"
+            href="carrito.html"
+            aria-label="Ver carrito, 0 productos"
+        >
+            Carrito <span class="cart-count">0</span>
+        </a>
+    </header>
 
-        <!-- Pie de página -->
-        <footer>
-            <p>Diego, Matías y Michel - 2026</p>
-        </footer>
-        <script src="assets/js/inicio-sesion.js"></script>
-    </body>
+    <main>
+        <section class="page-section">
+            <p class="eyebrow">Acceso de demostración</p>
+            <h1>Iniciar sesión</h1>
+            <p>
+                Ingresa con datos de prueba. No se inicia una sesión real.
+            </p>
+
+            <form class="formulario-simulacion">
+                <div>
+                    <label for="input-email-login">
+                        Correo electrónico
+                    </label>
+                    <input
+                        id="input-email-login"
+                        type="email"
+                        maxlength="100"
+                        placeholder="Ingrese su correo electrónico"
+                    >
+                    <p id="mensaje-email-login"></p>
+                </div>
+
+                <div>
+                    <label for="input-password-login">Contraseña</label>
+                    <input
+                        id="input-password-login"
+                        type="password"
+                        minlength="4"
+                        maxlength="10"
+                        placeholder="Ingrese una contraseña de prueba"
+                    >
+                    <p id="mensaje-password-login"></p>
+                </div>
+
+                <button id="btn-inicio-sesion" type="submit">
+
+                    Iniciar sesión
+                </button>
+            </form>
+
+            <p>
+                ¿No tienes una cuenta de demostración?
+                <a href="registro.html">Regístrate aquí</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="index.html">
+            <span aria-hidden="true">♪</span> Sonido Vivo
+        </a>
+        <p>Proyecto académico con contenido y datos simulados.</p>
+        <nav aria-label="Enlaces del pie">
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </footer>
+
+    <script type="module" src="assets/js/site.js"></script>
+    <script src="assets/js/inicio-sesion.js"></script>
+</body>
 </html>
